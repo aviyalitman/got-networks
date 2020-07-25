@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import pymysql
 
-midterm_conn = pymysql.connect(
+conn = pymysql.connect(
     host="localhost",
     user="dbuser",
     password="dbuserdbuser",
@@ -10,7 +10,7 @@ midterm_conn = pymysql.connect(
     cursorclass=pymysql.cursors.DictCursor)
 
 
-def run_q(sql, args=None, fetch=True, cur=None, conn=midterm_conn):
+def run_q(sql, args=None, fetch=True, cur=None, conn=conn):
     '''
     Helper function to run an SQL statement.
     
@@ -67,8 +67,8 @@ def drop_tables(table_list):
     A helper function to drop tables, which is necessary after executing the queries.
     '''
     for table in table_list:
-        q = "drop table %s"
-        res,d = run_q(q, args=(table))
+        q = "drop table if exists {}".format(table)
+        res,d = run_q(q)
 
 
 def all_edges():
@@ -88,9 +88,9 @@ def all_edges():
 
 def one_hop(character1, character2):
     '''
-    SQL function to find first degree relationships between characters.
+    SQL function to find second degree relationships between characters.
     '''
-
+    
     q = """CREATE TABLE w4111midterm.one_hop AS 
         SELECT s.source as one_source, s.target as one_target, t.source as two_source, t.target as two_target 
         FROM W4111Midterm.all_edges as s 
@@ -103,7 +103,7 @@ def one_hop(character1, character2):
 
 def two_hop(character1, character2):
     '''
-    SQL function to find second degree relationships between characters. 
+    SQL function to find third degree relationships between characters. 
     '''
 
     q = """CREATE TABLE w4111midterm.two_hop AS 
@@ -115,35 +115,3 @@ def two_hop(character1, character2):
     
     res,d = run_q(q, args=(character1, character1))
 
-
-def find_path(character1, character2):
-    '''
-    Function to find all possible second-degree paths between two characters.
-    AKA, a friend of a friend of a friend (or in this case, an enemy of an enemy of an enemy :))
-
-    Parameters
-    __________
-
-    character1 : string, must be a GOT character! Characters are listed in got-nodes.csv.
-    character2 : string, must be a GOT character!
-    '''
-    all_edges()
-    one_hop(character1, character2)
-    two_hop(character1, character2)
-    
-    q = """SELECT DISTINCT a.one_source, a.one_target, a.two_source, a.two_target, b.one_source_1, b.one_target_1 
-        FROM w4111midterm.one_hop as a 
-        JOIN w4111midterm.two_hop as b 
-        ON a.two_target=b.two_target and a.two_source=b.two_source 
-        WHERE a.one_source != b.one_target_1"""
-    
-    res,data = run_q(q)
-    
-    df = pd.DataFrame(data)
-    df = df[['one_source','one_target','two_target','one_target_1']]
-    df = df.rename(columns={'one_source':'Source', 'one_target': 'Middleman_1', 'two_target':'Middleman_2', 'one_target_1':'Target'})
-    
-    tables = ['all_edges', 'one_hop', 'two_hop']
-    drop_tables(tables)
-    
-    return df

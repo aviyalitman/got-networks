@@ -1,14 +1,18 @@
-import utilities
+import os
+import sys
+sys.path.append(os.path.realpath('.'))
+from src import utilities
 
-roose_craster = utilities.find_path('Roose', 'Craster')
-print(roose_craster)
+
+#roose_craster = utilities.find_path('Roose', 'Craster')
+#print(roose_craster)
 """
 0  Craster         Jon        Arya  Roose
 1  Craster         Jon        Robb  Roose
 """
 
-dany_robb = utilities.find_path('Daenerys', 'Robb')
-print(dany_robb)
+#dany_robb = utilities.find_path('Daenerys', 'Robb')
+#print(dany_robb)
 """
 0   Robb        Arya      Robert  Daenerys
 1   Robb      Eddard      Robert  Daenerys
@@ -22,8 +26,8 @@ print(dany_robb)
 9   Robb      Tyrion     Viserys  Daenerys
 """
 
-jon_cersei = utilities.find_path('Jon', 'Cersei')
-print(jon_cersei)
+#jon_cersei = utilities.find_path('Jon', 'Cersei')
+#print(jon_cersei)
 """
 0   Cersei        Arya        Bran    Jon
 1   Cersei        Arya      Robert    Jon
@@ -81,3 +85,5 @@ print(jon_cersei)
 53  Cersei      Tyrion       Sansa    Jon
 """
 
+#dany_cersei = utilities.find_path('Dany', 'Cersei')
+#print(dany_cersei)
