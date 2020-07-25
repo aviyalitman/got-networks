@@ -90,4 +90,4 @@ network3 = dany_robb.find_network()
 8   Robb     Stannis      Robert  Daenerys
 9   Robb      Tyrion     Viserys  Daenerys
 '''
-print(np.unique(network3['Middleman_1']))
+

@@ -7,7 +7,7 @@ from PIL import Image
 import graphviz as graphviz
 
 
-st.title('Character Relationships in Game of Thrones')
+st.title('Social Networks in Game of Thrones')
 image = Image.open('got.jpg')
 st.image(image, caption='Who knows who in Storm of Swords (ASOIAF, Book Three)?', use_column_width=True)
 
@@ -63,7 +63,7 @@ if character1 != character2 and st.sidebar.button('Go!'):
 
     st.graphviz_chart(graph, use_container_width=True)
 
-    st.write("*Appeared is defined as names mentioned within 15 words of each other.*")
+    st.write("*Appeared is defined as names mentioned within 15 words of each other in SoS.*")
 
 else:
     st.write("Please select two characters.")
