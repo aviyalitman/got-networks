@@ -10,9 +10,15 @@ I created a simulation of a graph database using Python and MySQL to discover 1s
 
 Characters are said to be related if they are mentioned within 15 words of each other in  *A Storm of Swords*, the third novel in *A Song of Ice and Fire*. If the latter is true, then it is highly probable that the characters are either appearing in the same scene or talking about each other. 
 
-## Demo
+## Demos
+
+Samwell Tarly and Cersei Lannister:
 
 ![sam_cersei](images/sam_cersei.gif)
+
+Mance Rayder and Arya Stark:
+
+![mance_arya](images/mance_arya.gif)
 
 
 ## Data & Methodology
