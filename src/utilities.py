@@ -31,12 +31,10 @@ def run_q(sql, args=None, fetch=True, cur=None, conn=conn):
         the fetch parameter is True. 'execute response' is the return from the connection.execute, which
         is typically the number of rows effected.
     '''
-
     cursor_created = False
     connection_created = False
 
     try:
-
         if conn is None:
             raise ValueError("In this implementation, conn cannot be None.")
 

@@ -1,5 +1,8 @@
 # Social Networks in Game of Thrones 
 
+Jon Snow and Joffrey never actually met in Storm of Swords, but their network doesn't seem to be hurting:
+![jon_joff](/images/jon_joff.png)
+
 The Game of Thrones/ ASOIAF world is so complex, with its hundreds of characters and settings. The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
 
 I created a simulation of a graph database using MySQL and Python to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. **This is basically the LinkedIn for Game of Thrones characters.**
