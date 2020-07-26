@@ -6,7 +6,7 @@ During quarantine I decided to hit up the book shelf and read George RR Martin's
 
 The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
 
-I created a simulation of a graph database using MySQL and Python to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. I guess you could say that this is like the LinkedIn for GOT characters. 
+I created a simulation of a graph database using Python and MySQL to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. I guess you could say that this is like the LinkedIn for GOT characters. 
 
 Characters are said to be related if they are mentioned within 15 words of each other in  *A Storm of Swords*, the third novel in *A Song of Ice and Fire*. If the latter is true, then it is highly probable that the characters are either appearing in the same scene or talking about each other. 
 
@@ -16,11 +16,11 @@ Nodes: 107; unimodal
 
 Edges: 353; undirected
 
-I used Python, MySQL, streamlit, and Graphiz to create 1st, 2nd, and 3rd-Degree networks for a pair of characters that may show how they know each other in the world of ASOIAF. That is,
+I used Python, MySQL, and Graphiz to create 1st, 2nd, and 3rd-Degree networks for a pair of characters that may show how they know each other in the world of ASOIAF. That is,
 
 - 1st-Degree: do the two characters know each other?
 
-$$match p = (s:Person {id:character1})-[r:APPEARED]-(t:Person {id: character2}) return p$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=(s:Person&space;{id:character1})-[r:APPEARED]-(t:Person&space;{id:&space;character2})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(s:Person&space;{id:character1})-[r:APPEARED]-(t:Person&space;{id:&space;character2})" title="(s:Person {id:character1})-[r:APPEARED]-(t:Person {id: character2})" /></a>
 
 - 2nd-Degree: who are the two characters' mutual friends (or enemies)?
 - 3rd-Degree: which characters appear with 2nd-Degree connections?
