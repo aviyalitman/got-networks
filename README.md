@@ -20,10 +20,27 @@ I used Python, MySQL, and Graphiz to create 1st, 2nd, and 3rd-Degree networks fo
 
 - 1st-Degree: do the two characters know each other?
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=(s:Person&space;{id:character1})-[r:APPEARED]-(t:Person&space;{id:&space;character2})" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(s:Person&space;{id:character1})-[r:APPEARED]-(t:Person&space;{id:&space;character2})" title="(s:Person {id:character1})-[r:APPEARED]-(t:Person {id: character2})" /></a>
+<div align="center">
+
+#### (s:Person {id:character1}) - [r:APPEARED] - (t:Person {id: character2})
+
+</div>
 
 - 2nd-Degree: who are the two characters' mutual friends (or enemies)?
+
+<div align="center">
+
+#### (s:Person {id:character1}) - [r:APPEARED*2] - (t:Person {id: character2})
+
+</div>
+
 - 3rd-Degree: which characters appear with 2nd-Degree connections?
+
+<div align="center">
+
+#### (s:Person {id:character1}) - [r:APPEARED*3] - (t:Person {id: character2})
+
+</div>
 
 I used streamlit to visualize the graphs for any pair of 107 characters. That means my program can generate about 11,342 different graphs (when you subtract 1-node graphs, like Cersei-Cersei). 
 
