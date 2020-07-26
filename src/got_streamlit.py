@@ -45,23 +45,25 @@ if character1 != character2 and st.sidebar.button('Go!'):
     
     # third degree relationships
     network = relationship.find_network()
-    st.subheader("{} and {}'s full relationship network:".format(character1, character2))
-    st.dataframe(network)
-
-    # creating a graph visual 
-    graph = graphviz.Graph()
-    graph.attr(size="10,10")
-
-    for middleman_1 in np.unique(network['Middleman_1']):
-        graph.edge(character1, middleman_1)
+    st.subheader("{} and {}'s 3rd-Degree Network:".format(character1, character2))
+    st.write(network)
     
-    for middleman_1, middleman_2 in zip(network['Middleman_1'], network['Middleman_2']):
-        graph.edge(middleman_1, middleman_2)
-    
-    for middleman_2 in np.unique(network['Middleman_2']):
-        graph.edge(middleman_2, character2)
+    if type(network) != str:
+          
+        # creating a graph visual 
+        graph = graphviz.Graph()
+        graph.attr(size="14,10")
 
-    st.graphviz_chart(graph, use_container_width=True)
+        for middleman_1 in np.unique(network['Middleman_1']):
+            graph.edge(character2, middleman_1)
+        
+        for middleman_1, middleman_2 in zip(network['Middleman_1'], network['Middleman_2']):
+            graph.edge(middleman_1, middleman_2)
+        
+        for middleman_2 in np.unique(network['Middleman_2']):
+            graph.edge(middleman_2, character1)
+
+        st.graphviz_chart(graph, use_container_width=True)
 
     st.write("*Appeared is defined as names mentioned within 15 words of each other in SoS.*")
 

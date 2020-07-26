@@ -1,12 +1,13 @@
 import pandas as pd
 import json
 import pymysql
+import secret_info as si
 
 conn = pymysql.connect(
     host="localhost",
-    user="dbuser",
-    password="dbuserdbuser",
-    db='W4111Midterm',
+    user=si.user,
+    password=si.password,
+    db=si.db,
     cursorclass=pymysql.cursors.DictCursor)
 
 
@@ -47,7 +48,6 @@ def run_q(sql, args=None, fetch=True, cur=None, conn=conn):
             log_message = cur.mogrify(sql, args)
         else:
             log_message = sql
-
 
         res = cur.execute(sql, args)
 

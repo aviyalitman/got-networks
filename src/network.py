@@ -3,14 +3,10 @@ import pandas as pd
 
 class Network:
     """
-    Class Network discovers first, second, and third degree relationships between characters.
-    A first degree relationship is the characters appearing within 15 words of each other 
-    in Storm of Swords.
-    A second degree relationship is defined as a third character who has appeared within
-    15 words of both characters 1 and 2. 
-    A third degree relationship is defined as character 1 appearing within 15 words of  
-    another character who appears within 15 words of another character who appears within
-    15 words of character 2.
+    Class Network discovers 1st, 2nd, and 3rd-Degree Networks between characters.
+    - 1st-Degree: do the two characters know each other?
+    - 2nd-Degree: who are the two characters' mutual friends (or enemies)?
+    - 3rd-Degree: which characters appear with 2nd-Degree connections?  
 
     Parameters
     __________
@@ -56,12 +52,12 @@ class Network:
     
     def friends(self):
         '''
-        A method that determines mutual friends. 
+        A method that builds 2nd-Degree Networks between two characters. 
         
         Returns 
         _______
         mutual_friends : a list of all people who have appeared together with both 
-        character 1 and character 2
+        character 1 and character 2.
         '''
         
         q = "SELECT DISTINCT one_hop.one_target FROM one_hop"
@@ -76,11 +72,11 @@ class Network:
     
     def find_network(self):
         '''
-        A method that determines the two characters' expanded third-degree network. 
+        A method that builds 3rd-Degree Networks between two characters. 
         
         Returns 
         _______
-        network : a DataFrame of third-degree relationships between character 1 and character 2.
+        network : a DataFrame of 3rd-Degree relationships between character 1 and character 2.
         '''
     
         q = """SELECT DISTINCT a.one_source, a.one_target, a.two_target, b.one_target_1
