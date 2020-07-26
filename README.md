@@ -2,23 +2,15 @@
 
 ![jon_joff](/images/jon_joff.png)
 
-During quarantine I decided to hit up the book shelf and read George RR Martin's [ASOIAF series](https://georgerrmartin.com/book-category/?cat=song-of-ice-and-fire). 
+During quarantine I decided to hit up the book shelf and read George RR Martin's [*A Song of Ice and Fire* series](https://georgerrmartin.com/book-category/?cat=song-of-ice-and-fire). The story is famously composed such that characters are "scattered geographically and enmeshed in their own social circles," yet are all related to each other in some way.
 
-The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
+I created a simulation of a graph database using Python and SQL to discover 1st, 2nd, and 3rd-Degree Networks between any two GOT characters. Characters are said to be related if they are mentioned within 15 words of each other in  *A Storm of Swords*, the third novel in *ASOIAF*. If the latter is true, then it is highly probable that the characters are either appearing in the same scene or talking about each other, which constitutes a relation in this simulation. 
 
-I created a simulation of a graph database using Python and MySQL to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. I guess you could say that this is like the LinkedIn for GOT characters. 
-
-Characters are said to be related if they are mentioned within 15 words of each other in  *A Storm of Swords*, the third novel in *A Song of Ice and Fire*. If the latter is true, then it is highly probable that the characters are either appearing in the same scene or talking about each other. 
-
-## Demos
+## Demo
 
 Samwell Tarly and Cersei Lannister:
 
 ![sam_cersei](images/sam_cersei.gif)
-
-Mance Rayder and Arya Stark:
-
-![mance_arya](images/mance_arya.gif)
 
 
 ## Data & Methodology
@@ -53,12 +45,10 @@ I used Python, MySQL, and Graphiz to create 1st, 2nd, and 3rd-Degree networks fo
 
 </div>
 
-I used streamlit to visualize the graphs for any pair of 107 characters. That means my program can generate about 11,342 different graphs (when you subtract 1-node graphs, like Cersei-Cersei). 
 
-## Examples
+I used streamlit to visualize the graphs for any pair of 107 characters. That means my program can generate about 11,342 different graphs (not counting 1-node graphs, like Cersei-Cersei or Tyrion-Tyrion). 
 
-Samwell Tarly and Cersei Lannister:
-![sam_cersei](/images/sam_cersei.png)
+### More Example Graphs
 
 Jon Snow and Margaery Tyrell:
 ![jon_marg](/images/jon_marg.png)
@@ -67,7 +57,7 @@ Daenerys Targaryen and Cersei Lannister:
 ![dany_cersei](/images/cersei_dany.png)
 
 
-## ASOIAF
+### ASOIAF
 
 A quick summary of the story by [Beveridge and Shan](https://www.maa.org/sites/default/files/pdf/Mathhorizons/NetworkofThrones%20%281%29.pdf):
 
