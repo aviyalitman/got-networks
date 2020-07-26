@@ -1,6 +1,5 @@
 # Social Networks in Game of Thrones 
 
-Jon Snow and Joffrey never actually met in Storm of Swords, but their network doesn't seem to be hurting:
 ![jon_joff](/images/jon_joff.png)
 
 The Game of Thrones/ ASOIAF world is so complex, with its hundreds of characters and settings. The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
@@ -24,6 +23,16 @@ I used Python, MySQL, streamlit, and Graphiz to create 1st, 2nd, and 3rd-Degree 
 - 3rd-Degree: which characters appear with 2nd-Degree connections?
 
 ## Streamlit Simulations
+
+Daenerys Targaryen and Cersei Lannister:
+![dany_cersei](/images/dany_cersei.png)
+
+Samwell Tarly and Cersei Lannister:
+![sam_cersei](/images/sam_cersei.png)
+
+Jon Snow and Margaery Tyrell:
+![jon_marg](/images/jon_marg.png)
+
 
 ## ASOIAF
 
