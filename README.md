@@ -57,9 +57,7 @@ Daenerys Targaryen and Cersei Lannister:
 
 ## Streamlit Demo
 
-<video width="320" height="240" controls>
-  <source src="streamlit_demo.mov" type="video/mp4">
-</video>
+![](streamlit_demo.mov)
 
 
 ## ASOIAF
