@@ -22,10 +22,10 @@ I used Python, MySQL, streamlit, and Graphiz to create 1st, 2nd, and 3rd-Degree 
 - 2nd-Degree: who are the two characters' mutual friends (or enemies)?
 - 3rd-Degree: which characters appear with 2nd-Degree connections?
 
-## Streamlit Simulations
+## Examples
 
 Daenerys Targaryen and Cersei Lannister:
-![dany_cersei](/images/dany_cersei.png)
+![dany_cersei](/images/cersei_dany.png)
 
 Samwell Tarly and Cersei Lannister:
 ![sam_cersei](/images/sam_cersei.png)
@@ -33,6 +33,7 @@ Samwell Tarly and Cersei Lannister:
 Jon Snow and Margaery Tyrell:
 ![jon_marg](/images/jon_marg.png)
 
+## Streamlit Simulations
 
 ## ASOIAF
 
