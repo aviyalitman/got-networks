@@ -55,7 +55,9 @@ Jon Snow and Margaery Tyrell:
 Daenerys Targaryen and Cersei Lannister:
 ![dany_cersei](/images/cersei_dany.png)
 
-## Streamlit Simulations
+## Streamlit Demo
+
+![streamlit_demo]](streamlit_demo.mov)
 
 
 ## ASOIAF
