@@ -2,15 +2,13 @@
 
 ![jon_joff](/images/jon_joff.png)
 
-Joffrey and Jon never actually met in *A Storm of Swords*, but their social network does not seem to be hurting. 
+During quarantine I decided to hit up the book shelf and read the five books in the [ASOIAF series](https://georgerrmartin.com/book-category/?cat=song-of-ice-and-fire). 
 
-The Game of Thrones/ ASOIAF world is so complex, with its hundreds of characters and settings. The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
+The story is so intricately composed that despite the characters being "scattered geographically and enmeshed in their own social circles," they are all related to each other somehow.
 
-I created a simulation of a graph database using MySQL and Python to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. **This is basically the LinkedIn for Game of Thrones characters.**
+I created a simulation of a graph database using MySQL and Python to discover 1st, 2nd, and 3rd-Degree Networks between any two characters. I guess you could say that this is like the LinkedIn for GOT characters. 
 
 Characters are said to be related if they are mentioned within 15 words of each other in George R. R. Martin's  *A Storm of Swords*, the third novel in his series *A Song of Ice and Fire*. If the latter is true, then it is highly probable that the characters are either appearing in the same scene or talking about each other. 
-
-This was inspired by my effort to remember all the character names and relationships after I finished reading the five books in the [ASOIAF series](https://georgerrmartin.com/book-category/?cat=song-of-ice-and-fire) during quarantine. 
 
 ## Data & Methodology
 
@@ -24,10 +22,9 @@ I used Python, MySQL, streamlit, and Graphiz to create 1st, 2nd, and 3rd-Degree 
 - 2nd-Degree: who are the two characters' mutual friends (or enemies)?
 - 3rd-Degree: which characters appear with 2nd-Degree connections?
 
-## Examples
+I used streamlit to visualize the graphs for any pair of 107 characters. That means my program can generate about 11,342 different graphs (when you subtract 1-node graphs, like Cersei-Cersei). 
 
-Daenerys Targaryen and Cersei Lannister:
-![dany_cersei](/images/cersei_dany.png)
+## Examples
 
 Samwell Tarly and Cersei Lannister:
 ![sam_cersei](/images/sam_cersei.png)
@@ -35,7 +32,11 @@ Samwell Tarly and Cersei Lannister:
 Jon Snow and Margaery Tyrell:
 ![jon_marg](/images/jon_marg.png)
 
+Daenerys Targaryen and Cersei Lannister:
+![dany_cersei](/images/cersei_dany.png)
+
 ## Streamlit Simulations
+
 
 ## ASOIAF
 
