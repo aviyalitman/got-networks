@@ -57,7 +57,7 @@ Daenerys Targaryen and Cersei Lannister:
 
 ## Streamlit Demo
 
-![streamlit_demo]](streamlit_demo.mov)
+![streamlit_demo](streamlit_demo.mov)
 
 
 ## ASOIAF
