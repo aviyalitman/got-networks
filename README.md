@@ -1,4 +1,4 @@
-# Social Networks in Game of Thrones :crown:	
+# Social Networks in Game of Thrones	
 
 ![jon_joff](/images/jon_joff.png)
 
